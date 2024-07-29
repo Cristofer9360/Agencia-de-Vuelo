@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selecciona tu Hotel</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Selecciona tu Hotel en <?php echo $destino; ?></h1>
+    <form id="hotelForm" action="registrar_vuelo_hotel.php" method="POST">
+        <input type="hidden" name="destino" value="<?php echo $destino; ?>">
+        <input type="hidden" name="fecha_ida" value="<?php echo $fecha_ida; ?>">
+        <input type="hidden" name="fecha_regreso" value="<?php echo $fecha_regreso; ?>">
+        
+        <!-- Aquí puedes incluir opciones para seleccionar el hotel según el destino -->
+        <label for="hotel">Hotel:</label>
+        <select name="hotel" id="hotel">
+            <option value="Hotel 1">Hotel 1</option>
+            <option value="Hotel 2">Hotel 2</option>
+            <option value="Hotel 3">Hotel 3</option>
+        </select><br><br>
+        
+        <button type="submit">Registrar Vuelo y Hotel</button>
+    </form>
+    <?php include 'notificaciones.php'; ?>
+</body>
+</html>
